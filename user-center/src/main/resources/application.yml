@@ -1,0 +1,23 @@
+
+
+spring:
+  application:
+    name: user-center
+  profiles:
+    active: default
+
+  cloud:
+    config:
+    enabled: true
+
+eureka:
+  instance:
+  preferIpAdddress: true
+  client:
+    registryWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8081
