@@ -15,6 +15,7 @@
     <bytecodeTargetLevel>
       <module name="server-1" target="1.8" />
       <module name="server-2" target="1.8" />
+      <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
