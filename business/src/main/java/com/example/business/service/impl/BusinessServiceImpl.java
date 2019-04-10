@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 @Service
 public class BusinessServiceImpl implements BusinessService {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+//    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     private HttpServletRequest request;
