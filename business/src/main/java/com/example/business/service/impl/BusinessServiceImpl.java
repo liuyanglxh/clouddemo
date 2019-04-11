@@ -1,9 +1,7 @@
 package com.example.business.service.impl;
 
 import com.example.business.service.BusinessService;
-import com.example.common.aop.annotation.LoggerAnnotation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.example.common.advice.annotation.LogException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +28,7 @@ public class BusinessServiceImpl implements BusinessService {
     }
 
     @Override
-    @LoggerAnnotation
+    @LogException
     public void testLog(boolean log) {
         if (log) {
             throw new RuntimeException("hahaha");

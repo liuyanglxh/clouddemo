@@ -3,11 +3,16 @@ package com.example.business.controller;
 import com.example.business.pojo.Result;
 import com.example.business.rpc.UserService;
 import com.example.business.service.BusinessService;
+import com.example.business.utils.HttpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.RequestContextListener;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Map;
 
@@ -31,4 +36,12 @@ public class BusinessController extends BaseController{
         businessService.testLog(log);
         return Result.success();
     }
+
+    @GetMapping("testRequestContextListener")
+    public Result testRequestContextListener() {
+        System.out.println(HttpUtil.getCurrentRequest().getHeader("hehe"));
+        HttpUtil.getCurrentResponse().setHeader("haha", "haha");
+        return Result.success();
+    }
+
 }

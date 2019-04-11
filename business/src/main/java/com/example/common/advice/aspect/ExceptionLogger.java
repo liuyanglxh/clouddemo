@@ -1,4 +1,4 @@
-package com.example.common.aop.excutioner;
+package com.example.common.advice.aspect;
 
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -16,7 +16,7 @@ public class ExceptionLogger {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("@annotation(com.example.common.aop.annotation.LoggerAnnotation)")
+    @Pointcut("@annotation(com.example.common.advice.annotation.LogException)")
     public void pointcut() {
     }
 
