@@ -10,13 +10,21 @@ public class HttpUtil {
 
 
     public static HttpServletRequest getCurrentRequest() {
-        ServletRequestAttributes ra = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        return ra.getRequest();
+        try {
+            ServletRequestAttributes ra = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+            return ra.getRequest();
+        } catch (IllegalStateException e) {
+            return null;
+        }
     }
 
     public static HttpServletResponse getCurrentResponse() {
-        ServletRequestAttributes ra = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        return ra.getResponse();
+        try {
+            ServletRequestAttributes ra = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+            return ra.getResponse();
+        } catch (IllegalStateException e) {
+            return null;
+        }
     }
 
 }

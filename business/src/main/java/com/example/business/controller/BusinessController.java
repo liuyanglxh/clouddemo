@@ -37,11 +37,5 @@ public class BusinessController extends BaseController{
         return Result.success();
     }
 
-    @GetMapping("testRequestContextListener")
-    public Result testRequestContextListener() {
-        System.out.println(HttpUtil.getCurrentRequest().getHeader("hehe"));
-        HttpUtil.getCurrentResponse().setHeader("haha", "haha");
-        return Result.success();
-    }
 
 }
