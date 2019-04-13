@@ -3,6 +3,7 @@ package com.example.business.controller;
 import com.example.business.pojo.Result;
 import com.example.business.rpc.UserService;
 import com.example.business.service.BusinessService;
+import com.example.business.service.impl.BusinessServiceImpl;
 import com.example.business.utils.HttpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +29,7 @@ public class BusinessController extends BaseController{
     @Autowired
     private BusinessService businessService;
 
-    @GetMapping("business/info")
+    @GetMapping("info")
     public Result getBusinessInfo(@RequestParam("userId") Integer userId) {
         Map<String, Object> userInfo = userService.getUserInfo(userId);
         return Result.success(userInfo);

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="business" />
         <module name="clouddemo" />
+        <module name="common" />
         <module name="eureka" />
         <module name="user-center" />
         <module name="zuul" />

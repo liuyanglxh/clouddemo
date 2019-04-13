@@ -1,0 +1,4 @@
+com/example/eureka/EurekaApplication.class
+com/example/aop/AopExcecutioner.class
+com/example/aop/Speaker.class
+com/example/aop/Speakerable.class
