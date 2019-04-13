@@ -16,6 +16,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Map;
 
+/**
+ *
+ */
 @RestController
 @RequestMapping("api/business/v1/")
 public class BusinessController extends BaseController{
