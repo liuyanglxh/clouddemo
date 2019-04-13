@@ -1,5 +1,10 @@
 package com.example.business.pojo;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Result {
 
     private boolean success;
@@ -32,19 +37,4 @@ public class Result {
         return result;
     }
 
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
 }

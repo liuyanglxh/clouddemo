@@ -1,7 +1,5 @@
 package com.example.usercenter.user.Controller;
 
-import com.example.common.utils.Tools;
-import com.example.usercenter.user.pojo.Result;
 import com.example.usercenter.user.pojo.vo.UserVo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +16,6 @@ public class UserController extends BaseController {
         UserVo vo = new UserVo();
         vo.setId(userId);
         vo.setName("user-" + userId);
-        return Tools.toJson(vo);
+        return vo;
     }
 }
