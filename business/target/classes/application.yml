@@ -5,6 +5,8 @@ spring:
     name: busiess
   profiles:
     active: default
+  jackson:
+    default-property-inclusion: non_null
 
   cloud:
     config:
@@ -25,3 +27,4 @@ eureka:
 
 server:
   port: 8082
+
