@@ -5,6 +5,8 @@ spring:
     name: user-center
   profiles:
     active: default
+  jackson:
+      default-property-inclusion: non_null
 
   cloud:
     config:
